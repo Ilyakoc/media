@@ -103,15 +103,33 @@
 <section class="block-3" id="block-3">
     <div class="block-desc">
         <div class="block-desc-left">
-
+            <img src="../../../images/men.png">
+            <div class="block-desc-name">
+                <span class="primary-color">Кувыкин</span> <br>
+                Богдан Сергеевич
+            </div>
         </div>
         <div class="block-desc-right">
-            <h1>О медиаторе</h1>
-            <span class="primary-color">Образование:</span>
+            <div class="block-desc-title">
+                <h1>О медиаторе</h1>
+                <span class="primary-color">Образование:</span>
+            </div>
+            <div class="block-desc-1">
+                <div class="block-desc-date">2012 - 2016</div>
+                <div class="block-desc-text">Национальный исследовательский университет «Высшая школа экономики», факультет права, <span class="primary-color">бакалавр</span></div>
+            </div>
+            <div class="block-desc-2">
+                <div class="block-desc-date">2016 - 2018</div>
+                <div class="block-desc-text">Национальный исследовательский университет «Высшая школа экономики», факультет права, <span class="primary-color">магистр</span></div>
+            </div>
+            <div class="block-desc-3">
+                <div class="block-desc-date">2020</div>
+                <div class="block-desc-text">Российская академия адвокатуры и нотариата, дополнительная профессиональная программа «Медиация»</div>
+            </div>
         </div>
     </div>
 
-    <div class="scroll-svg">
+    <div class="scroll-svg" style="background: linear-gradient(180deg, rgba(11, 11, 11, 0) 0%, #0B0B0B 100%);">
         <a href="#block-4">
             <svg width="59" height="60" viewBox="0 0 59 60" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M0.12 59.872H0.924L1.092 58H7.908V59.872H8.7L8.844 57.136H7.752V49.6H2.256V51.064C2.256 53.788 1.788 55.852 0.984 57.136H0.12V59.872ZM2.052 57.136C2.748 55.984 3.168 53.728 3.168 51.556V50.464H6.804V57.136H2.052ZM13.1149 58H14.0869L15.0829 55.78H19.6549L20.6389 58H21.6589L17.8309 49.54H16.9429L13.1149 58ZM15.4549 54.928L17.3749 50.644L19.2829 54.928H15.4549ZM26.7593 58.096C28.0553 58.096 29.2553 57.268 29.2553 51.376V50.464H32.8313V58H33.7793V49.6H28.3433V51.124C28.3433 56.848 27.2513 57.244 26.6033 57.244C26.3393 57.244 25.9913 57.184 25.8593 57.124L25.6673 57.892C25.8833 57.976 26.3873 58.096 26.7593 58.096ZM39.7497 58H45.8817V57.136H40.6977V54.196H45.2817V53.332H40.6977V50.464H45.8217V49.6H39.7497V58ZM51.3888 58H57.5208V57.136H52.3368V54.196H56.9208V53.332H52.3368V50.464H57.4608V49.6H51.3888V58Z" fill="#BDBDBD"/>
@@ -143,16 +161,33 @@
     </div>
 </section>
 <section class="block-5" id="block-5">
-    <? \crud\models\ar\Service::widget(); ?>
-    <div class="scroll-svg">
-        <a href="#block-6">
-            <svg width="59" height="60" viewBox="0 0 59 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0.12 59.872H0.924L1.092 58H7.908V59.872H8.7L8.844 57.136H7.752V49.6H2.256V51.064C2.256 53.788 1.788 55.852 0.984 57.136H0.12V59.872ZM2.052 57.136C2.748 55.984 3.168 53.728 3.168 51.556V50.464H6.804V57.136H2.052ZM13.1149 58H14.0869L15.0829 55.78H19.6549L20.6389 58H21.6589L17.8309 49.54H16.9429L13.1149 58ZM15.4549 54.928L17.3749 50.644L19.2829 54.928H15.4549ZM26.7593 58.096C28.0553 58.096 29.2553 57.268 29.2553 51.376V50.464H32.8313V58H33.7793V49.6H28.3433V51.124C28.3433 56.848 27.2513 57.244 26.6033 57.244C26.3393 57.244 25.9913 57.184 25.8593 57.124L25.6673 57.892C25.8833 57.976 26.3873 58.096 26.7593 58.096ZM39.7497 58H45.8817V57.136H40.6977V54.196H45.2817V53.332H40.6977V50.464H45.8217V49.6H39.7497V58ZM51.3888 58H57.5208V57.136H52.3368V54.196H56.9208V53.332H52.3368V50.464H57.4608V49.6H51.3888V58Z" fill="#BDBDBD"/>
-                <rect x="29" y="9" width="2" height="6" rx="1" fill="white"/>
-                <rect x="17" y="1" width="26" height="34" rx="13" stroke="white" stroke-width="2"/>
-            </svg>
-        </a>
+
+        <h1>Кейсы</h1>
+    <div class="cases">
+        <?php foreach (IBHelper::getElements(1) as $element): ?>
+            <div class="cases-item">
+                <div class="cases-top">
+                    <?=$element['props']['title']?>
+                </div>
+                <div class="cases-bottom">
+                    <?=$element['props']['desc']?>
+                </div>
+                <div class="cases-btn">
+                    <a href="#block-6">Хочу так же</a>
+                </div>
+            </div>
+        <?php endforeach; ?>
     </div>
+        <div class="scroll-svg">
+            <a href="#block-6">
+                <svg width="59" height="60" viewBox="0 0 59 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.12 59.872H0.924L1.092 58H7.908V59.872H8.7L8.844 57.136H7.752V49.6H2.256V51.064C2.256 53.788 1.788 55.852 0.984 57.136H0.12V59.872ZM2.052 57.136C2.748 55.984 3.168 53.728 3.168 51.556V50.464H6.804V57.136H2.052ZM13.1149 58H14.0869L15.0829 55.78H19.6549L20.6389 58H21.6589L17.8309 49.54H16.9429L13.1149 58ZM15.4549 54.928L17.3749 50.644L19.2829 54.928H15.4549ZM26.7593 58.096C28.0553 58.096 29.2553 57.268 29.2553 51.376V50.464H32.8313V58H33.7793V49.6H28.3433V51.124C28.3433 56.848 27.2513 57.244 26.6033 57.244C26.3393 57.244 25.9913 57.184 25.8593 57.124L25.6673 57.892C25.8833 57.976 26.3873 58.096 26.7593 58.096ZM39.7497 58H45.8817V57.136H40.6977V54.196H45.2817V53.332H40.6977V50.464H45.8217V49.6H39.7497V58ZM51.3888 58H57.5208V57.136H52.3368V54.196H56.9208V53.332H52.3368V50.464H57.4608V49.6H51.3888V58Z" fill="#BDBDBD"/>
+                    <rect x="29" y="9" width="2" height="6" rx="1" fill="white"/>
+                    <rect x="17" y="1" width="26" height="34" rx="13" stroke="white" stroke-width="2"/>
+                </svg>
+            </a>
+        </div>
+
 </section>
 
 <section class="block-6" id="block-6">
