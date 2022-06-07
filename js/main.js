@@ -156,11 +156,39 @@ $(document).ready(function() {
     $(document).on("click", "#totop", function(){$('body,html').animate({scrollTop:0},800);});
     $(window).on("scroll", function(){($(this).scrollTop() != 0)?$('#totop').fadeIn():$('#totop').fadeOut();});
 
-	$('.cases').slick({
-		slidesToShow: 2,
-		slidesToScroll: 1
-	});
 
+	if( window.innerWidth > 768 ){
+		$('.cases').slick({
+			slidesToShow: 2,
+			slidesToScroll: 1
+		});
+	} else {
+		// $('.cases').slick({
+		// 	centerMode: true,
+		// 	//rightPadding: '60px',
+		// 	slidesToShow: 1,
+		// 	responsive: [
+		// 		{
+		// 			breakpoint: 768,
+		// 			settings: {
+		// 				arrows: false,
+		// 				centerMode: true,
+		// 				centerPadding: '40px',
+		// 				slidesToShow: 3
+		// 			}
+		// 		},
+		// 		{
+		// 			breakpoint: 480,
+		// 			settings: {
+		// 				arrows: false,
+		// 				centerMode: true,
+		// 				centerPadding: '40px',
+		// 				slidesToShow: 1
+		// 			}
+		// 		}
+		// 	]
+		// });
+	}
 	var details = document.querySelectorAll("details");
 	for(i=0;i<details.length;i++) {
 		details[i].addEventListener("toggle", accordion);

@@ -41,6 +41,14 @@
                 </svg>
             </a>
         </div>
+        <div class="scroll-svg-mobile" style="background: linear-gradient(180deg, rgba(11, 11, 11, 0) 0%, #0B0B0B 100%);">
+            <a href="#block-2">
+                <svg width="49" height="37" viewBox="0 0 49 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M31 9.12133C31.5858 8.53554 31.5858 7.5858 31 7.00001C30.4142 6.41422 29.4645 6.41422 28.8787 7.00001L24 11.8787L19.1213 7.00001C18.5355 6.41422 17.5858 6.41422 17 7.00001C16.4142 7.58579 16.4142 8.53554 17 9.12133L22.6568 14.7782C23.0219 15.1433 23.5284 15.2808 24 15.1908C24.4716 15.2808 24.9781 15.1433 25.3432 14.7782L31 9.12133Z" fill="white"/>
+                    <path d="M0.1 35.7714H0.77L0.91 34.2114H6.59V35.7714H7.25L7.37 33.4914H6.46V27.2114H1.88V28.4314C1.88 30.7014 1.49 32.4214 0.82 33.4914H0.1V35.7714ZM1.71 33.4914C2.29 32.5314 2.64 30.6514 2.64 28.8414V27.9314H5.67V33.4914H1.71ZM10.9291 34.2114H11.7391L12.5691 32.3614H16.3791L17.1991 34.2114H18.0491L14.8591 27.1614H14.1191L10.9291 34.2114ZM12.8791 31.6514L14.4791 28.0814L16.0691 31.6514H12.8791ZM22.2995 34.2914C23.3795 34.2914 24.3795 33.6014 24.3795 28.6914V27.9314H27.3595V34.2114H28.1495V27.2114H23.6195V28.4814C23.6195 33.2514 22.7095 33.5814 22.1695 33.5814C21.9495 33.5814 21.6595 33.5314 21.5495 33.4814L21.3895 34.1214C21.5695 34.1914 21.9895 34.2914 22.2995 34.2914ZM33.1248 34.2114H38.2348V33.4914H33.9148V31.0414H37.7348V30.3214H33.9148V27.9314H38.1848V27.2114H33.1248V34.2114ZM42.824 34.2114H47.934V33.4914H43.614V31.0414H47.434V30.3214H43.614V27.9314H47.884V27.2114H42.824V34.2114Z" fill="#BDBDBD"/>
+                </svg>
+            </a>
+        </div>
     </div>
 </section>
 <section class="block-2" id="block-2">
@@ -52,7 +60,7 @@
     <div class="block-procedure">
         <div class="procedure-item">
             <div class="procedure-item-top">
-                1<span class="primary-color">.</span>
+                1<span class="primary-color">.</span> <p class="procedure-item-title">Подготовка</p>
             </div>
             <div class="procedure-item-bottom">
                 <p class="procedure-item-title">Подготовка</p>
@@ -62,7 +70,7 @@
         </div>
         <div class="procedure-item">
             <div class="procedure-item-top">
-                2<span class="primary-color">.</span>
+                2<span class="primary-color">.</span> <p class="procedure-item-title">Переговоры</p>
             </div>
             <div class="procedure-item-bottom">
                 <p class="procedure-item-title">Переговоры</p>
@@ -72,7 +80,7 @@
         </div>
         <div class="procedure-item">
             <div class="procedure-item-top">
-                3<span class="primary-color">.</span>
+                3<span class="primary-color">.</span> <p class="procedure-item-title">Нотариальное удостоверение</p>
             </div>
             <div class="procedure-item-bottom">
                 <p class="procedure-item-title">Нотариальное удостоверение</p>
@@ -81,7 +89,7 @@
         </div>
         <div class="procedure-item">
             <div class="procedure-item-top">
-                4<span class="primary-color">.</span>
+                4<span class="primary-color">.</span> <p class="procedure-item-title">Исполнение медиативного соглашения</p>
             </div>
             <div class="procedure-item-bottom">
                 <p class="procedure-item-title">Исполнение медиативного соглашения</p>
@@ -101,9 +109,11 @@
     </div>
 </section>
 <section class="block-3" id="block-3">
+    <h1 class="title-block-3">О медиаторе</h1>
     <div class="block-desc">
         <div class="block-desc-left">
-            <img src="../../../images/men.png">
+            <img src="../../../images/men.png" class="img-1">
+            <img src="../../../images/men-mobile.png" class="img-2">
             <div class="block-desc-name">
                 <span class="primary-color">Кувыкин</span> <br>
                 Богдан Сергеевич
@@ -173,7 +183,7 @@
                     <?=$element['props']['desc']?>
                 </div>
                 <div class="cases-btn">
-                    <a href="#block-6">Хочу так же</a>
+                    <a href="#block-6">ХОЧУ ТАК ЖЕ</a>
                 </div>
             </div>
         <?php endforeach; ?>
@@ -196,22 +206,22 @@
         <div class="service-item">
             <p class="service-item_title">Устная консультация</p>
             <p class="service-item_desc">На основании представленных сторонами документов</p>
-            <p class="service-item_price">от<br><span class="price-count">5000</span><span>руб</span></p>
+            <p class="service-item_price">от <br><span class="price-count">5000</span><span> руб</span></p>
         </div>
         <div class="service-item">
             <p class="service-item_title">Подготовка</p>
             <p class="service-item_desc">Медиативного соглашения</p>
-            <p class="service-item_price">от<br><span class="price-count">15000</span><span>руб</span></p>
+            <p class="service-item_price">от <br><span class="price-count">15000</span><span> руб</span></p>
         </div>
         <div class="service-item">
             <p class="service-item_title">Почасовая<br> оплата</p>
             <p class="service-item_desc">За час участия в переговорах</p>
-            <p class="service-item_price">от<br><span class="price-count">10000</span><span>руб</span></p>
+            <p class="service-item_price">от <br><span class="price-count">10000</span><span> руб</span></p>
         </div>
         <div class="service-item">
             <p class="service-item_title">Премия (гонорар) успеха</p>
             <p class="service-item_desc">Процент от стоимости имущества, являющегося предметом спора</p>
-            <p class="service-item_price">от<br><span class="price-count">5</span> <span>%</span></p>
+            <p class="service-item_price">от <br><span class="price-count">5</span> <span>%</span></p>
         </div>
     </div>
 

@@ -54,8 +54,12 @@ $fields = $factory->getModelFactory()->getAttributes();
             <div class="form-ank__input">
                 <?= $fields['email']->getModel()->widget($factory, $form, $this->params) ?>
                 <div class="feedback-file">
-                    <label>Прикрепить файл:</label>
-                    <?= $fields['files[]']->getModel()->widget($factory, $form, $this->params) ?>
+                    <label>Прикрепить проект</label>
+                    <div class="block-file file-error">
+                        <?= $fields['files[]']->getModel()->widget($factory, $form, $this->params) ?>
+                        <span class="file-name">Файл не выбран</span>
+                        <img src="../../../../../images/delete.png" class="remove"  style="height:16px; width:16px; display: none">
+                    </div>
                 </div>
             </div>
             <div class="privacy-form">
@@ -72,5 +76,45 @@ $fields = $factory->getModelFactory()->getAttributes();
 			)); ?>
             </div>
 		</div>
+    <div class="address-footer-callback-mobile">
+        <span>Адрес:</span><br>
+        <?= HtmlHelper::splitAddress(D::cms('address')) ?>
+    </div>
+    <div class="phone-footer-callback-mobile">
+        <span>Телефон:</span><br>
+        <a class="contact-link-phone" href="tel:<?= preg_replace('/[^0-9+]/', '', D::cms('phone')) ?>"><?= D::cms('phone') ?></a>
+    </div>
 	     <?php $this->endWidget(); ?>
 </div>
+<script>
+    document.querySelector('.remove').addEventListener('click', function() {
+        document.querySelector('input[type=file]').value = '';
+        $('.remove').css('display', 'none');
+        $('.file-name').html('Файл не выбран');
+    }, false);
+    document.getElementById('feedback_models_FeedbackModel_files').addEventListener('change', function(){
+        if( this.value ){
+            $('.remove').css('display', 'block');
+            $('.file-name').html(this.value.substr(12));
+        }
+    });
+</script>
+<style>
+    .remove{
+        height:16px;
+        width:16px;
+        display: none;
+        cursor:pointer;
+    }
+    .block-file{
+        align-items: center;
+        display: flex !important;
+        width: auto !important;
+        flex-direction: row !important;
+    }
+    .block-file > span{
+    //padding-top:5px;
+        color:#fff;
+    }
+
+</style>
